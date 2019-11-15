@@ -17,8 +17,13 @@ const loggedUsernameLabel = "#logged-user-name";
 
 
 function navigate(withAds = false) {
-    const url = `https://demo.applitools.com/hackathon.html?showAd=${withAds}`;
+    const url = `${getBaseUrlOrDefaultToV2()}?showAd=${withAds}`;
     cy.visit(url);
+}
+
+function getBaseUrlOrDefaultToV2() {
+    const hackatonV2Url = "https://demo.applitools.com/hackathonV2.html";
+    return !!Cypress.env("baseUrl") ? Cypress.env("baseUrl") : hackatonV2Url;
 }
 
 function checkLoginButton() {
