@@ -1,11 +1,14 @@
 {
-  "name": "todomvc-tests",
+  "name": "hackaton-applitools",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "cypress": "cypress open",
-    "test": "cypress run"
+    "hackatonV1-traditional": "cypress run --env baseUrl=https://demo.applitools.com/hackathon.html --spec 'cypress/integration/traditional_tests.spec.js'",
+    "hackatonV2-traditional": "cypress run --env baseUrl=https://demo.applitools.com/hackathonV2.html --spec 'cypress/integration/traditional_tests.spec.js'",
+    "hackatonV1-visual": "cypress run --env baseUrl=https://demo.applitools.com/hackathon.html --spec 'cypress/integration/visual_tests.spec.js'",
+    "hackatonV2-visual": "cypress run --env baseUrl=https://demo.applitools.com/hackathonV2.html --spec 'cypress/integration/visual_tests.spec.js'"
   },
   "keywords": [],
   "author": "",
