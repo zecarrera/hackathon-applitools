@@ -78,7 +78,7 @@ userAndPasswordInvalidInputs
     });
 
 describe("When user logs in with valid credentials", () => {
-    before(()=> {
+    before(() => {
         cy.eyesOpen({appName: 'hackaton-applitools', batchName: 'login-valid'});
 
         loginPage.navigate();
@@ -91,6 +91,10 @@ describe("When user logs in with valid credentials", () => {
     });
 
     describe("And user sorts table by amount", () => {
+        before(() => {
+            cy.eyesOpen({appName: 'hackaton-applitools', batchName: 'transactions-ordering'});
+        });
+        
         it("Then all entries are ordered by amount in ascending", () => {
             dashboardPage.orderTransactionsByAmount();
             dashboardPage.checkTransactiosnAreOrdered();
