@@ -62,13 +62,13 @@ userAndPasswordInvalidInputs
     .forEach(testInput => {
         describe("When user logs in with invalid data", () => {
             before(()=> {
-                cy.eyesOpen({appName: 'hackaton-applitools', batchName: `login-invalid-${testInput.testDescription}`});
+                cy.eyesOpen({appName: 'hackaton-applitools-2', batchName: `login-invalid`});
 
                 loginPage.navigate();
                 loginPage.loginAs(testInput.username, testInput.password);
             });
 
-            it("Then an error should be displayed", () =>{
+            it(`Then an error should be displayed-${testInput.testDescription}`, () =>{
                 loginPage.isWarningMessageDisplayed();
                 cy.eyesCheckWindow(`invalid login - error message shown - ${testInput.testDescription}`);
             });
@@ -91,10 +91,6 @@ describe("When user logs in with valid credentials", () => {
     });
 
     describe("And user sorts table by amount", () => {
-        before(() => {
-            cy.eyesOpen({appName: 'hackaton-applitools', batchName: 'transactions-ordering'});
-        });
-        
         it("Then all entries are ordered by amount in ascending", () => {
             dashboardPage.orderTransactionsByAmount();
             dashboardPage.checkTransactiosnAreOrdered();
