@@ -27,6 +27,7 @@ There are 4 different commands to allow you to run different tests configuration
 `npm run cypress`
 
 ### Running traditional test set from the terminal
+When running traditional test specs, screenshots and video captures are available at cypress/screenshots and cypress/videos, in case a test fails.
 
 #### Traditional tests on demo app V1
 `npm run hackatonV1-traditional`
@@ -41,9 +42,12 @@ There are 4 different commands to allow you to run different tests configuration
 
 ## Project structure
 
+### Cypress-Integration folder
+Contains test files that were built to exercise the demo app using the traditional approach and the visual AI.
+
 ### Page-objects folder
-
-#### Dashboard-page
-#### Login-page
-
+Helper functions that allow us to write easier to read tests. Functions are used by both traditional and visual test specs.
+Each file contains functions and checks to iterate with elements from the page in that given scope.
+Login-page focuses on the login form.
+Dashboard-page focuses on the features available once user is logged in. 
 
