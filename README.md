@@ -1,32 +1,49 @@
-# hackathon-applitools
-Applitools hackaton comparing traditional testing with AI testing with Applitools
+## What is it?
+Test automation hackathon exercise from [applitools](https://applitools.com/hackathon-instructions).
+This project contains tests written in a tradditional approach using [Cypress](https://www.cypress.io/) and a visual testing alternative using [applitools/eyes-cypress](https://github.com/applitools/eyes-cypress).
 
-# Setup
-npm install
+## Getting Started
 
-To run visual tests you'll need to set your applitools API key:
-export APPLITOOLS_API_KEY= {yourAPIKey}
-set APPLITOOLS_API_KEY= {yourAPIKey}
+This section provides a high-level requirement & quick start guide.
 
-# Running tests 
-npm run cypress (test using cypress UI, uses hackatonV2 demo app)
+### Prerequisites
 
-## npm run hackatonV1-traditional
-Runs tests built using traditional approach on hackatonV1
+- [Nodejs](https://nodejs.org/en/)
+- In order to use applitools you need a valid API_KEY
+-- export APPLITOOLS_API_KEY= {yourAPIKey}
+-- set APPLITOOLS_API_KEY= {yourAPIKey}
 
-## npm run hackatonV2-traditional
-Runs tests built using traditional approach on hackatonV2
+### Standard Installation
 
-## npm run hackatonV1-visual
-Runs tests built using visual AI approach on hackatonV1
+1. Make sure all the prerequisites are installed.
+2. Fork this repository.
+3. Clone your forked repository, ie. `git clone https://github.com/<your-username>/hackathon-applitools`
+4. Run `npm install`
 
-## npm run hackatonV2-visual
-Runs tests built using visual AI approach on hackatonV2
+## Running tests 
+There are 4 different commands to allow you to run different tests configurations.
 
-# Project structure
+### Running tests with cypress UI (configured to use hackatonV2 demo app)
+`npm run cypress`
 
-## page-objects folder
-### Dashboard-page
-### Login-page
+### Running traditional test set from the terminal
+
+#### Traditional tests on demo app V1
+`npm run hackatonV1-traditional`
+#### Traditional tests on demo app V2
+`npm run hackatonV2-traditional`
+
+### Running visual test set from the terminal
+#### Visual tests on demo app V1
+`npm run hackatonV1-visual`
+#### Visual tests on demo app V2
+`npm run hackatonV2-visual`
+
+## Project structure
+
+### Page-objects folder
+
+#### Dashboard-page
+#### Login-page
 
 
